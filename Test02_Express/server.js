@@ -11,10 +11,9 @@ app.set('views',__dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-// public directory를 static folder로 설정
-app.use(express.static('public'));
-
 var server = app.listen(8000, function(){
     console.log("Express server has started on port 8000!!")
 })
 
+// public directory를 static folder로 설정
+app.use(express.static('public'));
